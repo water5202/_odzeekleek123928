@@ -422,7 +422,7 @@ do --// UI Source
                 NewX = math.clamp(NewX, 0, ScreenSize.X - GuiSize.X)
                 NewY = math.clamp(NewY, 0, ScreenSize.Y - GuiSize.Y)
 
-                Self:Tween({Position = UDim2.new(0, NewX, 0, NewY)}, TweenInfo.new(0.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out))
+                Self:Tween({Position = UDim2.new(0, NewX, 0, NewY)}, TweenInfo.new(0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)) -- i should probably add a flag to change tween time
             end
 
             local InputChanged
