@@ -4722,6 +4722,8 @@ do --// UI Source
 
                         Flags[Dropdown.Flag] = Value
                         Items["Value"].Instance.Text = table.concat(Value, ", ")
+                        Items["Value"]:ChangeItemTheme({TextColor3 = "Text"})
+                        Items["Value"].Instance.TextColor3 = Library.Theme.Text
                     else
                         if not Dropdown.Options[Value] then
                             return
@@ -4743,10 +4745,10 @@ do --// UI Source
 
                         Flags[Dropdown.Flag] = Value
                         Items["Value"].Instance.Text = Value
+                        Items["Value"]:ChangeItemTheme({TextColor3 = "Text"})
+                        Items["Value"].Instance.TextColor3 = Library.Theme.Text
                     end
                                     
-                    Items["Value"]:ChangeItemTheme({TextColor3 = "Text"})
-                    Items["Value"].Instance.TextColor3 = Library.Theme.Text
                     Library:SafeCall(Dropdown.Callback, Dropdown.Value)
                 end
 
