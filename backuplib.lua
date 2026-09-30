@@ -38,7 +38,7 @@ do --// UI Source
         FontSize = 12,
 
         Animation = {
-            Time = 0.3,
+            Time = 0,
             Style = "Exponential",
             Direction = "Out"
         },
