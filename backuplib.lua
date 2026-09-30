@@ -4787,9 +4787,11 @@ do --// UI Source
                     function OptionData:ToggleState(Value)
                         if Value == "Active" then
                             OptionData.Text:ChangeItemTheme({TextColor3 = "Accent"})
+                            OptionData.Text.Instance.TextColor3 = Library.Theme.Accent
                             OptionData.Text:Tween({TextColor3 = Library.Theme.Accent})
                         else
                             OptionData.Text:ChangeItemTheme({TextColor3 = "Inactive Text"})
+                            OptionData.Text.Instance.TextColor3 = Library.Theme["Inactive Text"]
                             OptionData.Text:Tween({TextColor3 = Library.Theme["Inactive Text"]})
                         end
                     end
